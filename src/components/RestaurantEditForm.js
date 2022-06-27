@@ -5,26 +5,20 @@ import axios from "axios";
 export default function RestaurantEditForm() {
     let {id} = useParams();
     const herokuAPI = "https://namepinglouie-takehome-api.herokuapp.com/api";
-    const [restaurantUpdate, setRestaurantUpdate] = useState({
+    const [updatedRestaurant, setUpdatedRestaurant] = useState({
         description: "",
         phoneNumber: "",
     });
 
-    let {description, phoneNumber} = restaurantUpdate;
+    let {description, phoneNumber} = updatedRestaurant;
     
     const navigate = useNavigate();
 
-    const handleText = (e) => setRestaurantUpdate({...restaurantUpdate, [e.target.id]: e.target.value});
-
-    useEffect(() => {
-        axios.get(`${herokuAPI}/restaurants/${id}`)
-             .then(res => setRestaurantUpdate(res.data))
-             .catch(error => console.log(error))
-    }, [id]);
+    const handleText = (e) => setUpdatedRestaurant({...updatedRestaurant, [e.target.id]: e.target.value});
 
     const handleEdit = (e) => {
         e.preventDefault();
-        axios.patch(`${herokuAPI}/restaurants/${id}`, restaurantUpdate)
+        axios.patch(`${herokuAPI}/restaurants/${id}`, updatedRestaurant)
              .then(res => navigate("/restaurants"))
              .catch(error => console.log(error.response.request._response))
     };
