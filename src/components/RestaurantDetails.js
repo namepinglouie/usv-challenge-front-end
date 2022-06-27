@@ -38,6 +38,7 @@ export default function RestaurantDetails() {
             <div>
                 <Link to = {"/restaurants"}><button>BACK</button></Link>
                 <Link to = {`/restaurants/${id}/edit`}><button>EDIT</button></Link>
+                <Link to = {`/reservations/${id}/new`}><button>MAKE NEW RESERVATION</button></Link>
                 <button onClick = {handleDelete}>DELETE</button>
             </div>
         </div>

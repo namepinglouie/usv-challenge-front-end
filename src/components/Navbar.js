@@ -9,7 +9,7 @@ export default function Navbar() {
                 <Link to = "/restaurants">RESTAURANTS</Link>
                 <Link to = "/restaurants/new">NEW RESTAURANT</Link>
                 <Link to = "/reservations">RESERVATIONS</Link>
-                <Link to = "/reservations/new">NEW RESERVATION</Link>
+                {/* <Link to = "/reservations/new">NEW RESERVATION</Link> */}
             </div>
         </nav>
     );

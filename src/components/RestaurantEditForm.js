@@ -1,4 +1,4 @@
-import {useState, useEffect} from "react";
+import {useState} from "react";
 import {useNavigate, useParams, Link} from "react-router-dom";
 import axios from "axios";
 
@@ -34,7 +34,7 @@ export default function RestaurantEditForm() {
                 
                 <div>
                     <Link to = {`/restaurants/${id}`}><button>BACK</button></Link>
-                    <button type="submit">UPDATE</button>
+                    <button type = "submit">UPDATE</button>
                 </div>
             </form>
         </div>

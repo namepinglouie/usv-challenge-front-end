@@ -10,7 +10,9 @@ import New from "./pages/New.js";
 
 import Index2 from "./pages/Index2.js";
 import Show2 from "./pages/Show2.js";
+import Edit2 from "./pages/Edit2.js";
 import New2 from "./pages/New2.js";
+import New2a from "./pages/New2a.js";
 
 export default function App() {
   return(
@@ -27,7 +29,8 @@ export default function App() {
             <Route path = "/reservations" element = {<Index2 />} />
             <Route path = "/reservations/new" element = {<New2 />} />
             <Route path = "/reservations/:id" element = {<Show2 />} />
-            
+            <Route path = "/reservations/:id/edit" element = {<Edit2 />} />
+            <Route path = "/reservations/:id/new" element = {<New2a />} />
           </Routes>
         </main>
       </Router>
