@@ -4,7 +4,12 @@ import Restaurant from "./Restaurant.js";
 
 export default function Restaurants() {
     const [restaurants, setRestaurants] = useState([]);
-    const [searchRestaurant, setSearchRestaurant] = useState("");
+    
+    const [searchRestaurantName, setSearchRestaurantName] = useState("");
+    const [searchRestaurantCuisine, setSearchRestaurantCuisine] = useState("");
+    const [searchRestaurantLocation, setSearchRestaurantLocation] = useState("");
+    const [searchRestaurantPrice, setSearchRestaurantPrice] = useState("");
+    const [searchRestaurantDiningRestriction, setSearchRestaurantDiningRestriction] = useState("");
 
     const herokuAPI = "https://namepinglouie-takehome-api.herokuapp.com/api";
 
@@ -14,17 +19,33 @@ export default function Restaurants() {
              .catch(error => console.log(error))
     });
 
-    let handleSearch = (e) => setSearchRestaurant(e.target.value);
+    let handleSearchRestaurantName = (e) => setSearchRestaurantName(e.target.value);
 
-    const filterRestaurant = !searchRestaurant ? restaurants
-                                               : restaurants.filter((restaurant) => restaurant.name.toLowerCase().includes(searchRestaurant.toLowerCase()));
-    
-    const mapFilterRestaurant = filterRestaurant.map((restaurant) => <Restaurant key = {restaurant.id} restaurant = {restaurant} />);
-    
+    let handleSearchRestaurantCuisine = (e) => setSearchRestaurantCuisine(e.target.value);
+
+    let handleSearchRestaurantLocation = (e) => setSearchRestaurantLocation(e.target.value);
+
+    // let handleSearchRestaurantPrice = (e) => setSearchRestaurantPrice(e.target.value);
+
+    // let handleSearchRestaurantDiningRestriction = (e) => setSearchRestaurantDiningRestriction(e.target.value);
+
+    // const filterRestaurantPrice = restaurants.filter((restaurant) => restaurant.price.length === searchRestaurantPrice.length);
+
+    // const filterRestaurantDiningRestriction = restaurants.filter((restaurant) => restaurant.diningRestriction.includes(searchRestaurantDiningRestriction));
+
+    const arrOfFilters = restaurants.filter((restaurant) => restaurant.name.toLowerCase().includes(searchRestaurantName.toLowerCase()))
+                                    .filter((restaurant) => restaurant.cuisine.toLowerCase().includes(searchRestaurantCuisine.toLocaleLowerCase()))
+                                    .filter((restaurant) => restaurant.location.toLowerCase().includes(searchRestaurantLocation.toLowerCase()))
+
+    const mapFilterRestaurant = (filterRestaurant) => filterRestaurant.map((restaurant) => <Restaurant key = {restaurant.id} restaurant = {restaurant} />);
+
+
     return (
         <div>
-            <input type = "text" value = {searchRestaurant} onChange = {handleSearch} placeholder = "restaurant search" />
-            {mapFilterRestaurant}
+           <input type = "text" value = {searchRestaurantName} onChange = {handleSearchRestaurantName} placeholder = "search name" />
+           <input type = "text" value = {searchRestaurantCuisine} onChange = {handleSearchRestaurantCuisine} placeholder = "search cuisine" />
+           <input type = "text" value = {searchRestaurantLocation} onChange = {handleSearchRestaurantLocation} placeholder = "search location" />
+           {mapFilterRestaurant(arrOfFilters)}
         </div>
     );
 };
