@@ -14,3 +14,6 @@
 
 ## GITHUB LINK TO FRONTEND
 - https://github.com/namepinglouie/usv-challenge-front-end
+
+## NETLIFY LINK
+- https://stellular-quokka-e6fda5.netlify.app/
