@@ -3,7 +3,9 @@ import RestaurantNewForm from "../components/RestaurantNewForm.js";
 export default function New() {
     return (
         <div>
-            <h1>New Restaurant</h1>
+             <div className="title-tab">
+                <p>new</p>
+            </div>
             <RestaurantNewForm />
         </div>
     )

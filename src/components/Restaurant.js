@@ -1,20 +1,48 @@
 import {Link} from "react-router-dom";
 
 export default function Restaurant({restaurant}) {
-    let {id, name, description, phoneNumber, openingTime, closingTime, location, cuisine, price, diningRestriction} = restaurant;
+    let {id, name, phoneNumber, openingTime, closingTime, location, cuisine, price} = restaurant;
+
+    const formatPhoneNumber = (phone) => {
+        return phone.replace(/(\d{3})(\d{3})(\d{4})/, '($1)$2-$3');
+    };
 
     return (
-        <div>
+        <div className="restaurant-card-container">
             <Link to = {`/restaurants/${id}`}>
-                <h1>{name}</h1>
-                <h3>ID: {id}</h3>
-                <p>Cuisine: {cuisine}</p>
-                <p>Price: {price}</p>
-                <p>#: {phoneNumber}</p>
-                <p>Location: {location}</p>
-                <p>Description: {description}</p>
-                <p>Dining Restrictions: {diningRestriction}</p>
-                <p>opening: {openingTime} || closing: {closingTime}</p>
+                <div className="restaurant-card">
+                    <div className="restaurant-name">{name}</div>
+                    
+                    <div><img src="https://dummyimage.com/425x150/FFFFFF.png" alt = "dummy img" /></div>
+                    <div className="restaurant-info">
+                        <div className="text-category-container">
+                            <p className="tag-name">{cuisine}</p>
+                            <p className="tag-type">cuisine</p> 
+                        </div>
+                        <div className="text-category-container">
+                            <p className="tag-name">{price}</p>
+                            <p className="tag-type">price</p> 
+                        </div>
+                        <div className="text-category-container">
+                            <p className="tag-name">{formatPhoneNumber(phoneNumber)}</p>
+                            <p className="tag-type">phone</p> 
+                        </div>
+                        <div className="text-category-container">
+                            <p className="tag-name">{location}</p>
+                            <p className="tag-type">location</p> 
+                        </div>
+                        <div className="bottom-container">
+                            <div className="bottom-category-container">
+                                <p className="tag-name">{openingTime}</p>
+                                <p className="tag-type bottom-tag">opening hour</p>
+                            </div>
+                            <div className="bottom-category-container">
+                                <p className="tag-name">{closingTime}</p>
+                                <p className="tag-type bottom-tag">closing hour</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </Link>
         </div>
     );

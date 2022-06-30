@@ -5,7 +5,7 @@ body {
 /* NAVIGATION START */
 #navigation {
   background-color: red;
-  height: 90px;
+  height: 85px;
   margin-top: -23px;
   margin-right: -8px;
   margin-left: -8px;
@@ -17,6 +17,7 @@ body {
 .nav-title {
   font-size: 23px;
   padding: 15px;
+  margin-left: 20px;
 }
 
 .nav-title a {
@@ -45,3 +46,320 @@ body {
   border: 1px solid white;
 }
 /* NAVIGATION END */
+
+/* TITLE TAB START */
+.title-tab {
+  background-color: red;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin: 5px;
+  width: 250px;
+  height: 45px;
+  text-align: center;
+  position: absolute;
+  top: 55px;
+  left: 30px;
+  /* z-index: -1; */
+}
+
+.title-tab p {
+  font-size: 23px;
+  color: white;
+  text-align: center;
+  line-height: 0px;
+}
+/* TITLE TAB END */
+
+/* SEARCH BAR START */
+#searchbar-container {
+  margin: 50px auto;
+  background-color: red;
+  width:95%;
+  height: 100px;
+  border-radius: 10px;
+}
+
+#searchbar-container h3 {
+  font-size: 23px;
+  color: white;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.search-bar {
+  margin: 0px 20px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid white;
+  background: transparent;
+  color: white;
+  text-align: center;
+}
+
+::placeholder {
+  color: white;
+  text-align: center;
+  font-size: 18px;
+}
+
+input[type = "text"] {
+  width: 300px;
+  height: 25px;
+  font-size: 25px;
+}
+
+#center-search-bars {
+  text-align: center;
+}
+/* SEARCH BAR END */
+
+/* RESTAURANT CARD START */
+.center-restaurant-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.restaurant-card-container a {
+  text-decoration: none;
+  color: red;
+}
+
+.restaurant-card {
+  width: 425px;
+  background-color: red;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding-bottom: 10px;
+}
+
+.restaurant-card img {
+  margin-top: -15px;
+  outline: 5px solid red;
+  outline-offset: -5px;
+}
+
+.restaurant-name {
+  background-color: red;
+  font-size: 25px;
+  color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.restaurant-info {
+  margin: 10px;
+  color: white
+}
+
+.text-category-container {
+  margin-top: -20px;
+  margin-bottom: 30px;
+}
+
+.tag-name {
+  text-transform: uppercase;
+  font-size: 25px;
+}
+
+.tag-type {
+  margin-top: -25px;
+}
+
+.bottom-category-container {
+  color: white;
+}
+
+.bottom-category-container p {
+  margin: -5px;
+}
+
+.bottom-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 5px;
+}
+
+.bottom-tag {
+  text-align: center;
+}
+/* RESTUARANT CARD END */
+
+/* RESTAURANT DETAILS START */
+.detail-card-container {
+  margin: 50px auto;
+  width: 60%;
+}
+
+.detail-restaurant-title {
+  background-color: red;
+  font-size: 23px;
+  color: white;
+  height: 40px;
+  padding-top: 10px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.detail-restaurant-info {
+  background-color: red;
+  border-radius: 10px;
+  margin-top: 30px;
+  padding: 10px;
+  color: white;
+}
+
+.detail-restaurant-time {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: red;
+  margin-top: 30px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.detail-restaurant-time .tag-type {
+  text-align: center;
+}
+
+.description-padding {
+  padding-top: 20px;
+  text-align: justify;
+}
+
+.mini-nav {
+  text-align: center;
+  margin: 25px;
+}
+
+.mini-nav button {
+  width: 175px;
+  height: 35px;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: red;
+  border: none;
+  color: white;
+}
+
+.mini-nav button:hover {
+  background-color: white;
+  color: red;
+  border: 1px solid red;
+}
+/* RESTAURANT DETAILS END */
+
+/* EDIT FORM START */
+.edit-container {
+  margin: 50px auto;
+  width: 39%;
+  background-color: red;
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+}
+
+.edit-description label, .edit-phone label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.edit-phone #phoneNumber {
+  width: 250px;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  padding-left: 10px;
+  color: red;
+  font-size: 20px;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+}
+
+.edit-phone {
+  margin: 15px;
+}
+
+.edit-description {
+  margin: 15px;
+}
+
+.edit-description textarea, .form-description textarea {
+  width: 500px;
+  height: 200px;
+  border-radius: 10px;
+  padding: 10px;
+  color: red;
+  font-size: 15px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border: none;
+  resize: none;
+}
+
+.mini-nav-reverse button {
+  width: 175px;
+  height: 35px;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: white;
+  border: none;
+  color: red;
+}
+
+.mini-nav-reverse button:hover {
+  background-color: red;
+  color: white;
+  border: 1px solid white;
+}
+
+.mini-nav-reverse {
+  text-align: center;
+}
+/* EDIT FORM END */
+
+/* NEW RESTAURANT START */
+.new-restaurant-container {
+  margin: 50px auto;
+  width: 65%;
+  background-color: red;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.form-name label, .form-phone label, 
+.form-cuisine label, .form-location label,
+.form-price label, .form-dining-restriction label,
+.form-time label, .form-description label {
+  display: block;
+  margin: 10px 0px;
+}
+
+.new-restaurant-container .new-form-input {
+  width: 80%;
+  height: 35px;
+  border-radius: 10px;
+  border: none;
+  padding-left: 10px;
+  color: red;
+  font-size: 18px;
+}
+
+.new-restaurant-container div {
+  margin-bottom: 25px;
+}
+
+input[type=radio] {
+  width: 15px;
+  height: 15px;
+  margin-left: 20px;
+}
+
+.form-description textarea {
+  width: 80%;
+}
+/* NEW RESTAURANT END */

@@ -42,10 +42,17 @@ export default function Restaurants() {
 
     return (
         <div>
-           <input type = "text" value = {searchRestaurantName} onChange = {handleSearchRestaurantName} placeholder = "search name" />
-           <input type = "text" value = {searchRestaurantCuisine} onChange = {handleSearchRestaurantCuisine} placeholder = "search cuisine" />
-           <input type = "text" value = {searchRestaurantLocation} onChange = {handleSearchRestaurantLocation} placeholder = "search location" />
-           {mapFilterRestaurant(arrOfFilters)}
+            <div  id="searchbar-container">
+                <h3>SEARCH RESTAURANT</h3>
+                <div id = "center-search-bars">
+                    <input className="search-bar" type = "text" value = {searchRestaurantName} onChange = {handleSearchRestaurantName} placeholder = "name" />
+                    <input className="search-bar" type = "text" value = {searchRestaurantCuisine} onChange = {handleSearchRestaurantCuisine} placeholder = "cuisine" />
+                    <input className="search-bar" type = "text" value = {searchRestaurantLocation} onChange = {handleSearchRestaurantLocation} placeholder = "location" />
+                </div>
+           </div>
+           <div className="center-restaurant-card">
+                {mapFilterRestaurant(arrOfFilters)}
+           </div>
         </div>
     );
 };

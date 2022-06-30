@@ -3,7 +3,9 @@ import Restaurants from "../components/Restaurants";
 export default function Index() {
     return (
         <div>
-            <h1>RESTAURANT INDEX</h1>
+            <div className="title-tab">
+                <p>restaurants</p>
+            </div>
             <div>
                 <Restaurants />
             </div>

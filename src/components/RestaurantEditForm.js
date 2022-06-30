@@ -24,15 +24,17 @@ export default function RestaurantEditForm() {
     };
 
     return (
-        <div>
+        <div className="edit-container">
             <form onSubmit={handleEdit}>
-                <label htmlFor="description">DESCRIPTION</label>
-                <textarea id = "description" value = {description} onChange = {handleText}></textarea>
-                <br />
-                <label htmlFor = "phoneNumber">PHONE NUMBER</label>
-                <input id = "phoneNumber" value = {phoneNumber} type = "text" onChange={handleText} />
-                
-                <div>
+                <div className="edit-phone">
+                    <label htmlFor = "phoneNumber">PHONE NUMBER</label>
+                    <input id = "phoneNumber" value = {phoneNumber} type = "tel" onChange={handleText} />
+                </div>
+                <div className="edit-description">
+                    <label htmlFor="description">DESCRIPTION</label>
+                    <textarea id = "description" value = {description} onChange = {handleText}></textarea>
+                </div>
+                <div className="mini-nav-reverse">
                     <Link to = {`/restaurants/${id}`}><button>BACK</button></Link>
                     <button type = "submit">UPDATE</button>
                 </div>

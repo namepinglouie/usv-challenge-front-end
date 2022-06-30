@@ -31,41 +31,51 @@ export default function RestaurantNewForm() {
     let {name, description, phoneNumber, openingTime, closingTime, price, cuisine, location, diningRestriction} = restaurant;
     
     return (
-        <div>
+        <div className = "new-restaurant-container">
             <form onSubmit = {handleSubmit}>
-                <label htmlFor="name">NAME</label>
-                <input id = "name" value = {name} type = "text" onChange = {handleText} />
-                <br />
-                <label htmlFor="description">DESCRIPTION</label>
-                <textarea id = "description" value = {description} onChange = {handleText}></textarea>
-                <br />
-                <label htmlFor = "phoneNumber">PHONE NUMBER</label>
-                <input id = "phoneNumber" value = {phoneNumber} type = "text" onChange={handleText} />
-                <br />
-                <label htmlFor="openingTime">OPENING TIME</label>
-                <input id = "openingTime" value = {openingTime} type = "text" onChange = {handleText} />
-                <br />
-                <label htmlFor="closingTime">CLOSING TIME</label>
-                <input id = "closingTime" value = {closingTime} type = "text" onChange = {handleText} />
-                <br />
-                <label htmlFor="price">PRICE</label>
-                <input id = "price" value = {price} type = "text" onChange = {handleText} />
-                <br />
-                <label htmlFor="cuisine">CUISINE</label>
-                <input id = "cuisine" value = {cuisine} type = "text" onChange = {handleText} />
-                <br />
-                <label htmlFor="location">LOCATION</label>
-                <input id = "location" value = {location} type = "text" onChange = {handleText} />
-                <br />
-                <label htmlFor="diningRestriction">DINING RESTRICTION</label>
-                <input id = "diningRestriction" value = {diningRestriction} type = "text" onChange = {handleText} />
-
-                
-                <div><button type="submit">SUBMIT</button></div>
+                <div className="form-name">
+                    <label htmlFor="name">RESTAURANT NAME</label>
+                    <input className="new-form-input" id = "name" value = {name} type = "text" onChange = {handleText} />
+                </div>
+                <div className="form-phone">
+                    <label htmlFor = "phoneNumber">PHONE NUMBER</label>
+                    <input className="new-form-input"  id = "phoneNumber" value = {phoneNumber} type = "text" onChange={handleText} />
+                </div>
+                <div className="form-cuisine">
+                    <label htmlFor="cuisine">CUISINE</label>
+                    <input className="new-form-input"  id = "cuisine" value = {cuisine} type = "text" onChange = {handleText} />
+                </div>
+                <div className="form-location">
+                    <label htmlFor="location">LOCATION</label>
+                    <input className="new-form-input"  id = "location" value = {location} type = "text" onChange = {handleText} />
+                </div>
+                <div className="form-time">
+                    <label htmlFor="openingTime">OPENING TIME</label>
+                    <input className="new-form-input"  id = "openingTime" value = {openingTime} type = "text" onChange = {handleText} />
+                </div>
+                <div className="form-time">
+                    <label htmlFor="closingTime">CLOSING TIME</label>
+                    <input className="new-form-input"  id = "closingTime" value = {closingTime} type = "text" onChange = {handleText} />
+                </div>
+                <div className="form-price">
+                    <label htmlFor="price">PRICE</label>
+                    <input id = "price" type = "radio" value = "$" name = "price" onChange={handleText} /> $
+                    <input id = "price" type = "radio" value = "$$" name = "price" onChange={handleText} /> $$
+                    <input id = "price" type = "radio" value = "$$$" name = "price" onChange={handleText} /> $$$
+                    <input id = "price" type = "radio" value = "$$$$" name = "price" onChange={handleText} /> $$$$
+                </div>
+                <div className="form-dining-restriction">
+                    <label htmlFor="diningRestriction">DINING RESTRICTION</label>
+                    <input id = "diningRestriction" type = "radio" value = "Takeout Only" name = "diningRestriction" onChange={handleText} /> Takeout Only
+                    <input id = "diningRestriction" type = "radio" value = "Delivery Only" name = "diningRestriction" onChange={handleText} /> Delivery Only
+                </div>
+                <div className="form-description">
+                    <label htmlFor="description">DESCRIPTION</label>
+                    <textarea id = "description" value = {description} onChange = {handleText}></textarea>
+                </div>
+                <div className="mini-nav-reverse"><button type="submit">SUBMIT</button></div>
             </form>
         </div>
     )
 
 };
-
-// restaurant new form + restaurant edit form : make 2 radio buttons for dining restrictions
