@@ -51,11 +51,11 @@ export default function RestaurantNewForm() {
                 </div>
                 <div className="form-time">
                     <label htmlFor="openingTime">OPENING TIME</label>
-                    <input className="new-form-input"  id = "openingTime" value = {openingTime} type = "text" onChange = {handleText} />
+                    <input className="new-form-input"  id = "openingTime" value = {openingTime} type = "text" onChange = {handleText} placeholder = "00:00:00" />
                 </div>
                 <div className="form-time">
                     <label htmlFor="closingTime">CLOSING TIME</label>
-                    <input className="new-form-input"  id = "closingTime" value = {closingTime} type = "text" onChange = {handleText} />
+                    <input className="new-form-input"  id = "closingTime" value = {closingTime} type = "text" onChange = {handleText} placeholder = "00:00:00"/>
                 </div>
                 <div className="form-price">
                     <label htmlFor="price">PRICE</label>

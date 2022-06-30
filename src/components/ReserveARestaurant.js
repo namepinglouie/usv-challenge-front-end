@@ -37,28 +37,37 @@ export default function ReserveARestaurant() {
     };
 
     return (
-        <div>
-            <h1>RESERVE AT: {name}</h1>
+        <div className="reservation-container">
+            <div>
+                <h3>RESERVING AT</h3>
+                <h1>{name}</h1>
+            </div>
             <form onSubmit={handleSubmit}>
-            <label htmlFor="firstName">FIRST NAME</label>
-                <input id = "firstName" value = {firstName} type = "text" onChange = {handleText} />
-                <br />
-                <label htmlFor="lastName">LAST NAME</label>
-                <input id = "lastName" value = {lastName} type = "text" onChange = {handleText} />
-                <br />
-                <label htmlFor="phoneNumber">PHONE NUMBER</label>
-                <input id = "phoneNumber" value = {phoneNumber} type = "text" onChange = {handleText} />
-                <br />
-                <label htmlFor="email">EMAIL</label>
-                <input id = "email" value = {email} type = "text" onChange = {handleText} />
-                <br />
-                <label htmlFor="time">TIME</label>
-                <input id = "time" value = {time} type = "text" onChange = {handleText} />
-                <br />
-                <label htmlFor="numGuests">Number Of Guests</label>
-                <input id = "numGuests" value = {numGuests} type = "text" onChange = {handleText} />
-
-                <div><button type="submit">SUBMIT</button></div>
+                <div className="reservation-section">
+                    <label htmlFor="firstName">FIRST NAME</label>
+                    <input className="reservation-input" id = "firstName" value = {firstName} type = "text" onChange = {handleText} />
+                </div>
+                <div className="reservation-section">
+                    <label htmlFor="lastName">LAST NAME</label>
+                    <input className="reservation-input"  id = "lastName" value = {lastName} type = "text" onChange = {handleText} />
+                </div>
+                <div className="reservation-section">
+                    <label htmlFor="phoneNumber">PHONE NUMBER</label>
+                    <input className="reservation-input"  id = "phoneNumber" value = {phoneNumber} type = "text" onChange = {handleText} />
+                </div>
+                <div className="reservation-section">
+                    <label htmlFor="email">EMAIL</label>
+                    <input className="reservation-input"  id = "email" value = {email} type = "email" onChange = {handleText} />
+                </div>
+                <div className="reservation-section">
+                    <label htmlFor="time">TIME</label>
+                    <input className="reservation-input"  id = "time" value = {time} type = "text" onChange = {handleText} />
+                </div>
+                <div className="reservation-section">
+                    <label htmlFor="numGuests">Number Of Guests</label>
+                    <input className="reservation-input"  id = "numGuests" value = {numGuests} type = "number" onChange = {handleText} min = "1" />
+                </div>
+                <div className="mini-nav-reverse"><button type="submit">SUBMIT</button></div>
             </form>
         </div>
     )

@@ -42,9 +42,9 @@ export default function Restaurants() {
 
     return (
         <div>
-            <div  id="searchbar-container">
+            <div className="searchbar-container">
                 <h3>SEARCH RESTAURANT</h3>
-                <div id = "center-search-bars">
+                <div className = "center-search-bars">
                     <input className="search-bar" type = "text" value = {searchRestaurantName} onChange = {handleSearchRestaurantName} placeholder = "name" />
                     <input className="search-bar" type = "text" value = {searchRestaurantCuisine} onChange = {handleSearchRestaurantCuisine} placeholder = "cuisine" />
                     <input className="search-bar" type = "text" value = {searchRestaurantLocation} onChange = {handleSearchRestaurantLocation} placeholder = "location" />

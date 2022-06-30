@@ -12,7 +12,6 @@ export default function Restaurant({restaurant}) {
             <Link to = {`/restaurants/${id}`}>
                 <div className="restaurant-card">
                     <div className="restaurant-name">{name}</div>
-                    
                     <div><img src="https://dummyimage.com/425x150/FFFFFF.png" alt = "dummy img" /></div>
                     <div className="restaurant-info">
                         <div className="text-category-container">

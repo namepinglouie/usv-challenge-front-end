@@ -27,11 +27,15 @@ export default function Reservations() {
 
     return (
         <div>
-            <h1>Display All Reservations OR By RESERVATIONS BY RESTAURANT</h1>
-            <input type = "text" value = {searchReservation} onChange = {handleSearch} placeholder = "reservation search" />
-            {mapFilterReservations}
+            <div className="searchbar-container">
+                <h3>SEARCH RESERVATION</h3>
+                <div className="center-search-bars">
+                    <input className="search-bar" type = "text" value = {searchReservation} onChange = {handleSearch} placeholder = "restaurant id" />
+                </div>
+            </div>
+            <div className="center-reservation-card">
+                {mapFilterReservations}
+            </div>
         </div>
     )
 };
-
-// will need to check if filter restaurant ID works with creating new reservations

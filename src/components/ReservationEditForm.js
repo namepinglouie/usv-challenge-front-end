@@ -24,15 +24,17 @@ export default function ReservationEditForm() {
     };
 
     return (
-        <div>
+        <div className="edit-reservation-container">
             <form onSubmit={handleEdit}>
-                <label htmlFor="time">TIME</label>
-                <input id = "time" value = {time} type = "text" onChange={handleText} />
-                <br />
-                <label htmlFor="numGuests">NUMBER OF GUESTS</label>
-                <input id = "numGuests" value = {numGuests} type = "text" onChange={handleText} />
-                
-                <div>
+                <div className="edit-time">
+                    <label htmlFor="time">TIME</label>
+                    <input id = "time" value = {time} type = "text" onChange={handleText} placeholder="enter a digit for time" />
+                </div>
+                <div className="edit-guest-number">
+                    <label htmlFor="numGuests">NUMBER OF GUESTS</label>
+                    <input id = "numGuests" value = {numGuests} type = "number" onChange={handleText} min = "1" />
+                </div>
+                <div className="mini-nav-reverse">
                     <Link to = {`/reservations/${id}`}><button>BACK</button></Link>
                     <button type = "submit">UPDATE</button>
                 </div>

@@ -71,7 +71,7 @@ body {
 /* TITLE TAB END */
 
 /* SEARCH BAR START */
-#searchbar-container {
+.searchbar-container {
   margin: 50px auto;
   background-color: red;
   width:95%;
@@ -79,7 +79,7 @@ body {
   border-radius: 10px;
 }
 
-#searchbar-container h3 {
+.searchbar-container h3 {
   font-size: 23px;
   color: white;
   text-align: center;
@@ -96,7 +96,7 @@ body {
   text-align: center;
 }
 
-::placeholder {
+.search-bar::placeholder {
   color: white;
   text-align: center;
   font-size: 18px;
@@ -108,13 +108,13 @@ input[type = "text"] {
   font-size: 25px;
 }
 
-#center-search-bars {
+.center-search-bars {
   text-align: center;
 }
 /* SEARCH BAR END */
 
 /* RESTAURANT CARD START */
-.center-restaurant-card {
+.center-restaurant-card, .center-reservation-card {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -187,7 +187,7 @@ input[type = "text"] {
 /* RESTUARANT CARD END */
 
 /* RESTAURANT DETAILS START */
-.detail-card-container {
+.detail-card-container, .reservation-detail-container {
   margin: 50px auto;
   width: 60%;
 }
@@ -251,7 +251,7 @@ input[type = "text"] {
 /* RESTAURANT DETAILS END */
 
 /* EDIT FORM START */
-.edit-container {
+.edit-container, .edit-reservation-container {
   margin: 50px auto;
   width: 39%;
   background-color: red;
@@ -362,4 +362,157 @@ input[type=radio] {
 .form-description textarea {
   width: 80%;
 }
+
+.form-time ::placeholder, .edit-time ::placeholder {
+  color: red;
+}
 /* NEW RESTAURANT END */
+
+/* NEW RESERVATION START */
+.reservation-container {
+  background-color: red;
+  width: 65%;
+  margin: 50px auto;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.reservation-container h3, .reservation-container h1 {
+  text-align: center;
+  margin: 0px;
+}
+
+.reservation-section {
+  margin: 25px;
+  text-align: center;
+}
+
+.reservation-section label{
+  display: block;
+  margin-bottom: 10px;
+}
+
+.reservation-section input[type=text], 
+.reservation-section input[type=email],
+.reservation-section input[type=number] 
+{
+  width: 80%;
+  height: 35px;
+  border: none;
+  border-radius: 10px;
+  padding-left: 10px;
+  color: red;
+  font-size: 20px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+/* NEW RESERVATION END */
+
+/* RESERVATIONS CARD START */
+.center-reservation-card {
+  margin: -18px auto 10px auto;
+  width: 95%;
+}
+
+.reservation-card {
+  width: 400px;
+  background-color: red;
+  padding: 10px;
+  border-radius: 10px;
+  margin-right: 50px;
+  margin-top: -60px;
+}
+
+.reservation-card-container a {
+  text-decoration: none;
+  color: white;
+}
+
+.reservation-name, .reservation-name-id {
+  font-size: 18px;
+  margin-top: -10px;
+}
+
+.reservation-type {
+  text-transform: lowercase;
+}
+
+.reservation-name {
+  text-transform: uppercase;
+}
+
+.reservation-card-section {
+  margin-top: -15px;
+  margin-bottom: 30px;
+}
+
+.circle-guest {
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  border: 5px solid red;
+  border-radius: 50%;
+  color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  right: -375px;
+  top: -15px;
+}
+/* RESERVATIONS CARD END */
+
+/* RESERVATION DETAILS START */
+.reservation-detail {
+  background-color: red;
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+}
+
+.reservation-detail-id {
+  text-align: center;
+}
+
+.reservation-detail-guest-number {
+  border: 2px solid white;
+  width: 200px;
+  height: 35px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px auto;
+}
+/* RESERVATION DETAILS END */
+
+/* RESERVATION EDIT START */
+.edit-time label, .edit-guest-number label {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.edit-reservation-container input {
+  border-radius: 10px;
+  border: none;
+  width: 450px;
+  height: 30px;
+  padding-left: 10px;
+  color: red;
+  font-size: 20px;
+}
+
+.edit-reservation-container div {
+  margin-bottom: 20px;
+}
+
+.edit-reservation-container {
+  width: 34%;
+  padding-left: 25px;
+}
+/* RESERVATION EDIT END */
