@@ -516,3 +516,14 @@ input::-webkit-inner-spin-button {
   padding-left: 25px;
 }
 /* RESERVATION EDIT END */
+
+/* HOME INTRO START */
+.intro {
+  width: 25%;
+  background-color: red;
+  color: white;
+  margin: 50px auto;
+  padding: 10px;
+  border-radius: 10px;
+}
+/* HOME INTRO END */
