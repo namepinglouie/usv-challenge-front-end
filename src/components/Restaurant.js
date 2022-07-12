@@ -1,7 +1,7 @@
 import {Link} from "react-router-dom";
 
 export default function Restaurant({restaurant}) {
-    let {id, name, phoneNumber, openingTime, closingTime, location, cuisine, price} = restaurant;
+    let {id, name, phoneNumber, openingTime, closingTime, location, cuisine, price, reservations} = restaurant;
 
     const formatPhoneNumber = (phone) => {
         return phone.replace(/(\d{3})(\d{3})(\d{4})/, '($1)$2-$3');
@@ -30,6 +30,12 @@ export default function Restaurant({restaurant}) {
                             <p className="tag-name">{location}</p>
                             <p className="tag-type">location</p> 
                         </div>
+
+                        <div className="text-category-container">
+                            <p className="tag-name">{reservations.length}</p>
+                            <p className="tag-type">reservations</p> 
+                        </div>
+
                         <div className="bottom-container">
                             <div className="bottom-category-container">
                                 <p className="tag-name">{openingTime}</p>

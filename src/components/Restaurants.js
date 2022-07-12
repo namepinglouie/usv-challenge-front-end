@@ -11,13 +11,22 @@ export default function Restaurants() {
     const [searchRestaurantPrice, setSearchRestaurantPrice] = useState("");
     const [searchRestaurantDiningRestriction, setSearchRestaurantDiningRestriction] = useState("");
 
+    const [popularReservation, setPopularReservation] = useState([]);
+
     const herokuAPI = "https://namepinglouie-takehome-api.herokuapp.com/api";
 
     useEffect(() => {
         axios.get(`${herokuAPI}/restaurants`)
-             .then(res => setRestaurants(res.data.restaurants))
+             .then(res => {
+                setPopularReservation(res.data.restaurants.sort((a,b) => {
+                    return b.reservations.length - a.reservations.length;
+                }))
+                setRestaurants(res.data.restaurants)
+              })
              .catch(error => console.log(error))
     });
+
+    
 
     let handleSearchRestaurantName = (e) => setSearchRestaurantName(e.target.value);
 
@@ -37,8 +46,7 @@ export default function Restaurants() {
                                     .filter((restaurant) => restaurant.cuisine.toLowerCase().includes(searchRestaurantCuisine.toLocaleLowerCase()))
                                     .filter((restaurant) => restaurant.location.toLowerCase().includes(searchRestaurantLocation.toLowerCase()))
 
-    const mapFilterRestaurant = (filterRestaurant) => filterRestaurant.map((restaurant) => <Restaurant key = {restaurant.id} restaurant = {restaurant} />);
-
+    const mapFilterRestaurant = (filterRestaurant) => filterRestaurant.map((restaurant) => <Restaurant key = {restaurant.id} restaurant = {restaurant} isPopular = {popularReservation} />);
 
     return (
         <div>
